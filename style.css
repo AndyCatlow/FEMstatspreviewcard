@@ -7,8 +7,11 @@
   --clr-text-lighter: hsla(0, 0%, 100%, 0.6);
 
   --fontsize-main: 15px;
-  --fontfamily-main: ;
-  --fontfamily-p: ;
+  --fontsize-large: 21px;
+  --fontfamily-main: "Inter", sans-serif;
+  --fontfamily-p: "Lexend Deca", sans-serif;
+  --fontweight-norm: 400;
+  --fontweight-bold: 700;
 }
 
 *,
@@ -22,21 +25,58 @@
 img {
   width: 100%;
   display: inline-block;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--clr-main-bg);
+  width: 100vw;
+  height: 100vh;
 }
 
 .grid-container {
+  margin: 2em auto;
   display: grid;
-  width: 100vw;
+  width: 80%;
   text-align: center;
+  font-family: var(--fontfamily-main);
+  font-size: var(--fontsize-main);
+  font-weight: var(--fontweight-norm);
+  background-color: var(--clr-dark-bg);
+  color: var(--clr-text-lighter);
+  gap: 1em;
+  border-radius: 10px;
 }
 
 .img-container {
-  width: 100vw;
+  width: 100%;
+  overflow: hidden;
 }
 
+.title {
+  font-weight: var(--fontweight-bold);
+  color: var(--clr-text);
+  font-size: var(--fontsize-large);
+  padding: 1em;
+}
 .text-highlight {
-  font-weight: bold;
-  color: blueviolet;
+  color: var(--clr-accent);
+}
+
+.blurb {
+  padding: 1em;
+}
+
+.stats {
+  display: grid;
+  gap: 1em;
+  padding: 1em;
+}
+
+.stats-highlight {
+  color: var(--clr-text);
+  font-weight: var(--fontweight-bold);
+  font-size: var(--fontsize-large);
 }
 
 .attribution {
