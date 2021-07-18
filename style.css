@@ -79,7 +79,10 @@ body {
   display: block;
   opacity: 0.6;
 }
-
+.text-container {
+  max-width: 410px;
+  margin: 0 auto;
+}
 .title {
   font-weight: var(--fontweight-bold);
   color: var(--clr-text);
@@ -130,11 +133,28 @@ body {
     height: 100%;
   }
   .text-container {
+    font-size: 1.5vw;
     height: 100%;
-    align-items: center;
-    justify-content: center;
+    max-width: 50%;
+    align-items: space-evenly;
+    justify-content: space-evenly;
+    padding: 4em;
+  }
+  .text-container > * {
+    padding: 0;
+  }
+  .title {
+    font-size: 2em;
+  }
+  .blurb {
+    padding-top: 1em;
+    padding-bottom: 3em;
   }
   .stats {
     flex-direction: row;
+    justify-content: space-between;
+  }
+  .stats-highlight {
+    font-size: 1em;
   }
 }
